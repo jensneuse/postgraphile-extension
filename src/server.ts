@@ -9,7 +9,7 @@ const server = express();
 server.use(
     postgraphile('postgres://postgres@localhost:15432/postgres','workshop',{
         graphiql: true,
-        graphqlRoute: '/graphql'
+        graphqlRoute: '/graphql',
     })
 );
 
