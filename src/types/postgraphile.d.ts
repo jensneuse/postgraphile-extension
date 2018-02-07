@@ -19,7 +19,7 @@ type PostGraphQLOptions = {
   exportGqlSchemaPath?: string;
   bodySizeLimit?: string;
   pgSettings?: { [key: string]: any } | ((req: object) => Promise<{ [key: string]: any }>); //IncomingMessage
-  appendPlugins?: Array<(builder: any) => {}>;
+  appendPlugins?: Array<(builder: any,options:any) => void>;
   prependPlugins?: Array<(builder: any) => {}>;
   replaceAllPlugins?: Array<(builder: any) => {}>;
   additionalGraphQLContextFromRequest?: (req: object, res: object) => Promise<{}>; //IncomingMessage, ServerResponse
